@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        document.getElementById('initialCard').classList.remove('d-none');
+    }, 10000); // تأخير الظهور لمدة 7 ثواني
+    });
+    
+    document.getElementById('button2').addEventListener('click', function() {
+        // إخفاء الكارد
+        document.getElementById('initialCard').classList.add('d-none');
+    });
+    </script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> <!-- إضافة ملف الجافا سكريبت للتبديل بين القوائم -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sidenav = document.querySelector('.sidenav');
+        const navIcons = document.querySelector('.navbar-toggler');
+        const closeBtn = document.querySelector('.closebtn');
+    
+        // فتح القائمة الجانبية
+        navIcons.addEventListener('click', function() {
+            sidenav.style.width = '250px';
+        });
+    
+        // إغلاق القائمة الجانبية
+        closeBtn.addEventListener('click', function() {
+            sidenav.style.width = '0';
+        });
+    });
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sidenav = document.querySelector('.sidenavv');
+        const navIcons = document.querySelector('.navbarr-toggler');
+        const closeBtn = document.querySelector('.closebbtn');
+    
+        // فتح القائمة الجانبية
+        navIcons.addEventListener('click', function() {
+            sidenav.style.width = '270px';
+        });
+    
+        // إغلاق القائمة الجانبية
+        closeBtn.addEventListener('click', function() {
+            sidenav.style.width = '0';
+        });
+    });
+    </script>
+  
+    </head>
+    <body>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Changa&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+           
+                   body{
+                       font-family: "Cairo", sans-serif;
+             font-optical-sizing: auto;
+             font-style: normal;
+             font-variation-settings:  "slnt" 0;
+                   }
+           
+                   .sidenav {
+                       height: 100%;
+                       width: 0;
+                       position: fixed;
+                       z-index: 1;
+                       top: 0;
+                       right: 0;
+                       background-color: white;
+                       overflow-x: hidden;
+                       transition: 0.5s;
+                       padding-top: 60px;
+                       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                       float: right;
+                       text-align: right;
+    
+                   }
+           
+                   .sidenavv {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+    
+        .sidenavv a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #000;
+            display: block;
+            transition: 0.3s;
+        }
+    
+        .sidenavv a:hover {
+            color: #007bff;
+        }
+    
+        .sidenavv .closebbtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+                  
+    
+    .sidenav a {
+        /* أنماط الرابط الفردي هنا */
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #0A284E;
+        transition: 0.3s;
+    }
+           
+           
+           
+                       .sidenavv {padding-top: 15px;}
+                       .sidenavv a {font-size: 18px;}
+                   
+           
+                   .sidenav a:hover {
+                       color: orange ;
+                   }
+           
+                   .sidenav .closebtn {
+                       position: absolute;
+                       top: 0;
+                       left: 25px;
+                       font-size: 36px;
+                       margin-right: 50px;
+                   }
+           
+                       .sidenav {padding-top: 15px;}
+                       .sidenav a {font-size: 18px;}
+                   
+           
+                   .nav-icons {
+                       display: none; /* يتم إخفاء الأيقونة في البداية */
+                   }
+           
+                   .nav-icons.active {
+                       display: block; /* عرض الأيقونة عند النقر عليها */
+                       cursor: pointer;
+                   }
+               </style>
+     <nav class="navbar navbar-expand-md navbar-white bg-white shadow-sm fixed">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <img class="navbar-toggler-icon" src="images/list.gif" alt="">
+            </button>
+          
+            <a class="navbar-brand " href="index.html" style="margin-left: auto;"  onclick="redirectToPath()">
+              <img src="images/WhatsApp Image 2024-06-27 at 3.08.26 AM.jpeg"   width="70px" alt="">
+            </a>
+    
+                
+                <style>
+        .navbar-toggler-icon::before {
+        content: ''; /* نحذف النص الحالي */
+        display: inline-block;
+        width: 30px; /* يمكنك تعديل عرض الصورة هنا */
+        height: 30px; /* يمكنك تعديل ارتفاع الصورة هنا */
+        background-image: url('images/list.gif'); /* استبدل path/to/your/image.png بمسار الصورة الخاصة بك */
+        background-size: cover; /* لضمان تغطية الصورة الكاملة لمساحة الأيقونة */
+        background-repeat: no-repeat; /* لمنع تكرار الصورة */
+        background-position: center; /* لوضع الصورة في وسط الأيقونة */
+        text-decoration: none;
+    }
+    </style>
+            
+                <style>
+                    .searchh-container {
+                position: relative;
+            }
+            
+            .searchh-box {
+                display: none;
+                position: absolute;
+                /* right: 50%; */
+                padding: 10px;
+                cursor: pointer;
+                background-color: #ffffff;
+                border: 1px solid #d1d1d1;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                /* z-index: 10; */
+            }
+            
+            
+            .searchh-box input {
+                width: 200px;
+                padding: 8px;
+                margin-right: 10px;
+                border: 1px solid #d1d1d1;
+                border-radius: 5px;
+                font-size: 14px;
+                outline: none;
+            }
+            
+            .searchh-box button {
+                padding: 8px;
+                background-color: #007bff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+            
+            .searchh-box button:hover {
+                background-color: #0056b3;
+            }
+            
+            .searchh-box button i {
+                color: #ffffff;
+            }
+            
+            /* إظهار مربع البحث عندما يكون مرئيًا */
+            .searchh-box.active {
+                display: block;
+            }
+                </style>
+            
+                <script>
+                    document.getElementById('searchIcon').addEventListener('click', function() {
+                var searchBox = document.getElementById('searchBox');
+                searchBox.classList.toggle('active');
+            });
+                </script>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav clas me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="استكشاف.html" onclick="redirectToPath()" style="color: #0A284E;">استكشاف</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="redirectToPath()" style="color: #0A284E;">تسجيل دخول</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-warning" href="index.html" onclick="redirectToPath()" tabindex="-1" aria-disabled="true" style="color: #0A284E;">انضم</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <a class="nav-link navbarr-toggler" href="#" onclick="redirectToPath()" tabindex="-1" aria-disabled="true" style="color: #0A284E;">
+                <img src="images/purchase.png" width="20px" alt="">
+            </a>
+        </div>
+    </nav>
+    
+    <style>
+        .clas{
+            margin-inline-start: auto;
+        }
+    
+        @media (max-width: 768px) {
+        .row {
+            flex-direction: row; /* تغيير توجيه الصف ليكون أفقيًا */
+            flex-wrap: wrap; /* السماح بالتفاف العناصر عندما يكون العرض ضيقًا */
+            justify-content: space-between; /* توزيع العناصر بالتساوي على طول الصف */
+        }
+    
+        .col-md-2 {
+            width: calc(50% - 10px); /* جعل عرض العمود 50% مع تحديد التباعد بين العمودين */
+            margin-bottom: 20px; /* تباعد بين البطاقات */
+        }
+    }
+    </style>
+    </script>
+    <button id="scrollToTop" style="position: fixed; bottom: 20px; right: 20px; background-color: #ffffff; color: #000000; border: none; padding: 0; border-radius: 50%; cursor: pointer; display: none; font-size: 24px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; z-index: 1000; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+      <span>&#8679;</span>
+    </button>
+    <script>
+      const scrollToTopButton = document.getElementById('scrollToTop');
+    
+      window.addEventListener('scroll', () => {
+          if (window.scrollY > 300) {
+              scrollToTopButton.style.display = 'block';
+          } else {
+              scrollToTopButton.style.display = 'none';
+          }
+      });
+    
+      scrollToTopButton.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    </script>
+    <style>
+    #scrollToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: white;
+      color: orange;
+      border: none;
+      padding: 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      font-size: 18px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+      z-index: 1000;
+    }
+    
+    #scrollToTop:hover {
+      background-color: #0056b3;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+    
+    #back-to-top {
+      position: fixed;
+      bottom: 40px;
+      right: 20px;
+      background-color: white;
+      color: orange;
+      padding: 12px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      display: none;
+      z-index: 1000;
+      transition: background-color 0.3s, transform 0.3s;
+      font-size: 20px;
+      line-height: 0;
+      text-align: center;
+    }
+    
+    #back-to-top:hover {
+      background-color: #0056b3;
+      transform: translateY(-5px);
+    }
+    </style>
+    <div class="sidenav">
+        <a href="#"   onclick="redirectToPath()"  class="closebtn">&times;</a>
+        <a href="#"  onclick="redirectToPath()" >الرئيسية</a>
+        <a href="#"  onclick="redirectToPath()" > قصتنا</a>
+        <a href="#"  onclick="redirectToPath()" >تحدث مع الفريق</a>
+        <a href="استكشاف.html"  onclick="redirectToPath()" >استكشاف  </a> 
+        <a href="#"  onclick="redirectToPath()" >الدعم الفني</a>
+        <a href="#"  onclick="redirectToPath()" >انضم الينا</a>
+    </div>
+    
+    <div class="sidenavv">
+        <a href="#"   onclick="redirectToPath()"  class="closebbtn">&times;</a>
+        <div class="container">
+            <p>عربة التسوق فارغة الآن</p>
+        </div>
+    <style>
+        .sidenavv .container {
+            padding: 80px;
+            background-color: #f8f9fa;
+            margin-right: 10px;
+            margin-left: 150px;
+            /* border: 1px solid #dee2e6; */
+            /* border-radius: 7px; */
+            margin-top: 100px;
+            text-align: center;
+            /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
+        }
+    
+        .sidenavv .container p {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+            font-weight: bold;
+            text-transform: uppercase;
+            background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+    </div>
+    
+    <style>
+    .custom-search {
+        width: 300px; /* تعيين عرض أكبر لمربع البحث */
+        background-color: rgba(255, 255, 255, 0.986); /* خلفية شفافة */
+        border: none; /* حذف حدود مربع البحث */
+        border-radius: 20px; /* تحديد زوايا مدورة */
+        padding: 10px; /* مساحة داخلية */
+        color: #333; /* لون النص */
+        font-size: 16px; /* حجم الخط */
+    }
+    
+    .customm-search {
+        width: 300px; /* تعيين عرض أكبر لمربع البحث */
+        background-color: rgba(255, 255, 255, 0); /* خلفية شفافة */
+        border: none; /* حذف حدود مربع البحث */
+        border-radius: 20px; /* تحديد زوايا مدورة */
+        padding: 10px; /* مساحة داخلية */
+        color: #333; /* لون النص */
+        font-size: 16px; /* حجم الخط */
+    }
+    
+    .custom-search::placeholder {
+        color: #999; /* لون النص الافتراضي */
+    }
+    
+    .custom-search:focus {
+        outline: none; /* إزالة الحدود عند التركيز */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* ظل لمربع البحث عند التركيز */
+    }
+    header {
+        min-height: 75vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.692),rgba(0, 0, 0, 0.651)), url(images/pexels-tranmautritam-245032.jpg);
+        background-position: center;
+        background-size: cover;
+        background-clip: padding-box; /* تحديد المنطقة الداخلية للصورة */
+    }
+    
+    
+    .link {
+        position: absolute;
+        top: 90%;
+    }
+    
+    .link i{
+        margin-right: 15px;
+        font-size: 18px;
+        border: solid white 5px;
+        border-radius: 50px;
+    }
+    .ahmed{
+        position: absolute;
+        top: 40%;
+    }
+    
+    </style>
+    
+<section class="m-5">
+    <div class="container">
+    <span class="" style="color: #808080; font-size: 25px; float: right; " >   بعض المشاريع الجاهزه حاليا
+                </span>
+
+<br>
+</div>
+
+</section>
+
+<div class="container m-auto">
+
+<div class="row  m-auto">
+<div class="col-md-4">
+  <div class="card ">
+    <div class="product-image">
+      <img src="images/istockphoto-1646100009-612x612.jpg" alt="Product Image">
+    </div>
+    <div class="details">
+      <div class="profile">
+        <img class="owner-avatar" src="images/WhatsApp Image 2024-06-27 at 3.08.26 AM.jpeg" alt="Owner Avatar">
+        <div class="owner-name">   Code AH_products</div>
+      </div>
+      <div class="post">
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, libero!</p>
+      </div>
+      <hr>
+      <div class="price m-auto  " style="font-size: 13px;  "  >ابتدا من
+        <br>
+         <span style="font-size: 20px;">$100</span>
+       
+
+         <div class="icon"><a class="text-decoration-none" onclick="captureAndDownloadPDF()"  > <i class="fas fa-heart  red-heart "></i></a>
+         </div>
+    </div>
+    </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="card ">
+    <div class="product-image">
+      <img src="images/istockphoto-1646204919-612x612.jpg" alt="Product Image">
+    </div>
+    <div class="details">
+      <div class="profile">
+        <img class="owner-avatar" src="images/WhatsApp Image 2024-06-27 at 3.08.26 AM.jpeg" alt="Owner Avatar">
+        <div class="owner-name">   Code AH_products</div>
+      </div>
+      <div class="post">
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, libero!</p>
+      </div>
+      <hr>
+      <div class="price m-auto  " style="font-size: 13px;  "  >ابتدا من
+        <br>
+         <span style="font-size: 20px;">$100</span>
+       
+
+         <div class="icon"><a class="text-decoration-none" onclick="captureAndDownloadPDF()"  > <i class="fas fa-heart  red-heart "></i></a>
+         </div>
+    </div>
+    </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="card ">
+    <div class="product-image">
+      <img src="images/pexels-fauxels-3183153.jpg" alt="Product Image">
+    </div>
+    <div class="details">
+      <div class="profile">
+        <img class="owner-avatar" src="images/WhatsApp Image 2024-06-27 at 3.08.26 AM.jpeg" alt="Owner Avatar">
+        <div class="owner-name">   Code AH_products</div>
+      </div>
+      <div class="post">
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, libero!</p>
+      </div>
+      <hr>
+      <div class="price m-auto  " style="font-size: 13px;  "  >ابتدا من
+        <br>
+         <span style="font-size: 20px;">$100</span>
+       
+
+         <div class="icon"><a class="text-decoration-none" onclick="captureAndDownloadPDF()"  > <i class="fas fa-heart  red-heart "></i></a>
+         </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div> 
+<style>
+    .card {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 5px;
+   
+    /* transition: opacity 0.3s, height 0.3s, padding 0.3s, margin 0.3s; */
+  }
+
+  
+  .product-image img {
+    width: 100%;
+    height: auto;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+  .details {
+    padding: 15px;
+  }
+  
+  .profile {
+    display: flex;
+    margin-bottom:10px ;
+  }
+  
+  .owner-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .owner-name {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 6px;
+  }
+  
+  
+  .price {
+    text-align:  left;
+  }
+  
+  .icon {
+    float: right;
+    font-size: 24px;
+    color: red;
+  }
+  </style>
+
+<br>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+          
+            <div class="col-md-4" style="text-align: center;">
+                <h5 style="text-align: center;">عن الموقع</h5>
+                  <p class="list-unstyled">نحن ملتزمون بتقديم أفضل المحتويات والخدمات في الشرق الأوسط، مما يعزز الابتكار والتواصل.</p>
+
+                
+            </div>
+            <div class="col-md-4" style="text-align: center;">
+                <h5 style="text-align: center;">تواصل معنا</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">whatsapp</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4" style="text-align: center;">
+              <h5 style="text-align: center;">روابط سريعة</h5>
+              <ul class="list-unstyled">
+                  <li><a href="#">الصفحة الرئيسية</a></li>
+                  <li><a href="#">الخدمات</a></li>
+                  <li><a href="#">من نحن</a></li>
+                  <li><a href="#">اتصل بنا</a></li>
+              </ul>
+          </div>
+           
+                 
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+<style>
+    .footer {
+background-color: #f8f9fa;
+padding: 50px 0;
+}
+
+.footer .payment-icons {
+display: flex;
+justify-content: center; /* لوضع العناصر في الوسط أفقيًا */
+align-items: center; /* لوضع العناصر في الوسط عموديًا */
+}
+
+.footer .payment-icons img {
+width: 50px; /* تعيين حجم الصور حسب الحاجة */
+margin: 0 10px; /* تعيين هامش بين الصور */
+}
+
+.footer h5 {
+color: #333;
+}
+
+.footer ul {
+padding: 0;
+list-style: none;
+}
+
+.footer ul li {
+margin-bottom: 10px;
+}
+
+.footer ul li a {
+color: #666;
+text-decoration: none;
+}
+
+.footer ul li a:hover {
+color: #000;
+}
+</style>
+
+
+<style>
+    /* Reset some default styles */
+  
+  
+    /* Style for the WhatsApp icon */
+    .whatsapp-icon {
+      display: inline-block;
+      background-color: #0A284E; /* WhatsApp green color */
+      color: #fff;
+      font-size: 24px;
+      width: 55px;
+      height: 55px;
+      text-align: center;
+      line-height: 55px;
+      border-radius: 50%;
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+  
+  
+  
+  
+    <a id="watsapp-link" class="text-decoration-none" href="https://api.whatsapp.com/send?phone=201021700756" target="_blank">
+  
+    <div class="whatsapp-icon"><i class="fab fa-whatsapp"></i></div>
+  </a>
+  
+  
+  
+  
+  
+  <script>
+    document.getElementById("watsapp-link").addEventListener("click", function(event){
+        event.preventDefault(); // يمنع التصرف الافتراضي للرابط
+        window.open(this.getAttribute("href"), "_blank");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll and Open Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <button class="scroll-button">اطلب الآن</button>
+    </header>
+    
+    <section id="register-section" class="hidden">
+        <div class="card">
+            <h2>التسجيل</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">الاسم:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="price">السعر:</label>
+                        <input type="number" id="price" name="price" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">الموقع:</label>
+                        <input type="text" id="location" name="location" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="note">ملاحظة:</label>
+                    <textarea id="note" name="note" rows="3" required></textarea>
+                </div>
+                <button type="submit">تسجيل</button>
+            </form>
+        </div>
+    </section>
+
+    <script >
+        document.querySelector('.scroll-button').addEventListener('click', () => {
+    const registerSection = document.getElementById('register-section');
+    registerSection.classList.remove('hidden');
+    registerSection.scrollIntoView({ behavior: 'smooth' });
+    
+    // Add the visible class after scrolling and a delay of 2 seconds
+    setTimeout(() => {
+        registerSection.classList.add('visible');
+    }, 1000);
+});
+    </script>
+  <style>
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.scroll-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.scroll-button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+#register-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    padding: 20px;
+    opacity: 0; /* Start with hidden */
+    transform: translateY(50px); /* Initial position for animation */
+    transition: opacity 2s ease, transform 2s ease; /* Animation properties */
+}
+
+#register-section.visible {
+    opacity: 1; /* Make it visible */
+    transform: translateY(0); /* Move to final position */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 35px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto; /* Center the card */
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between rows */
+}
+
+.form-row {
+    display: flex;
+    margin: 6px;
+
+    gap: 15px; /* Space between columns */
+    align-items: center; /* Center elements vertically */
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    margin: 6px;
+    flex-direction: column;
+    align-items: flex-end; /* Align labels to the right */
+    text-align: left;
+}
+
+.card label {
+    margin-bottom: 5px;
+    text-align: right;
+    font-size: 1rem;
+    margin-left: auto;
+    color: #666;
+}
+
+.card input, .card textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 15px; /* Space between inputs */
+}
+
+.card button {
+    padding: 10px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: white;
+    color: orange;
+}
+  </style>
+</body>
+</html>

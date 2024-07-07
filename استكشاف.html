@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html dir="rtl"  lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <title>  Code AH - استكشاف</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> 
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
+  
+    <link rel="stylesheet" href="css/bootstrap.min.css">  
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidenav = document.querySelector('.sidenav');
+            const navIcons = document.querySelector('.navbar-toggler');
+            const closeBtn = document.querySelector('.closebtn');
+        
+            // فتح القائمة الجانبية
+            navIcons.addEventListener('click', function() {
+                sidenav.style.width = '250px';
+            });
+        
+            // إغلاق القائمة الجانبية
+            closeBtn.addEventListener('click', function() {
+                sidenav.style.width = '0';
+            });
+        });
+        </script>
+<button id="scrollToTop" style="position: fixed; bottom: 40px; right: 20px; background-color: #ffffff; color: #000000; border: none; padding: 0; border-radius: 50%; cursor: pointer; display: none; font-size: 24px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; z-index: 1000; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+    <span>&#8679;</span>
+</button>
+</button>
+<script>
+    const scrollToTopButton = document.getElementById('scrollToTop');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollToTopButton.style.display = 'block';
+        } else {
+            scrollToTopButton.style.display = 'none';
+        }
+    });
+
+    scrollToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+<style>
+ #scrollToTop {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    background-color: white;
+    color: orange;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    z-index: 1000;
+}
+
+#scrollToTop:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    background-color: white;
+    color: orange;
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 20px;
+    line-height: 0;
+    text-align: center;
+}
+
+#back-to-top:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+}
+</style>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidenav = document.querySelector('.sidenavv');
+            const navIcons = document.querySelector('.navbarr-toggler');
+            const closeBtn = document.querySelector('.closebbtn');
+        
+            // فتح القائمة الجانبية
+            navIcons.addEventListener('click', function() {
+                sidenav.style.width = '270px';
+            });
+        
+            // إغلاق القائمة الجانبية
+            closeBtn.addEventListener('click', function() {
+                sidenav.style.width = '0';
+            });
+        });
+        </script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    position: relative;
+}
+
+input[type="text"] {
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    width: 300px;
+}
+
+input[type="text"]:focus {
+    border-color: #6ab4f5;
+    box-shadow: 0 0 8px rgba(106, 180, 245, 0.6);
+}
+
+button {
+    background-color: #6ab4f5;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-left: -50px;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4e99d1;
+}
+
+/* Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% 
+    {
+        transform: scale(1);
+    }
+}
+
+button:focus {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+    animation: pulse 1s infinite;
+}
+
+        input[type="text"], select {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-left: 5px;
+            width: 35%;
+            font-size: 14px;
+        }
+
+        select {
+            width: 25%;
+            padding: 9px;
+            
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: calc(33.33% - 20px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+            object-fit: cover;
+            max-height: 200px;
+        }
+
+        .card-content {
+            padding: 15px;
+            flex-grow: 1;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+        }
+
+        .price {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .heart {
+            font-size: 18px;
+            color: #e74c3c;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .cards-container {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        .not-found {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Changa&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+       
+               body{
+                   font-family: "Changa", sans-serif;
+         font-optical-sizing: auto;
+         font-style: normal;
+         font-variation-settings:  "slnt" 0;
+               }
+       
+               .sidenav {
+                   height: 100%;
+                   width: 0;
+                   position: fixed;
+                   z-index: 1;
+                   top: 0;
+                   right: 0;
+                   background-color: white;
+                   overflow-x: hidden;
+                   transition: 0.5s;
+                   padding-top: 60px;
+                   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                   float: right;
+                   text-align: right;
+
+               }
+       
+               .sidenavv {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #f8f9fa;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .sidenavv a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #000;
+        display: block;
+        transition: 0.3s;
+    }
+
+
+    .sidenavv .closebbtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+              
+
+.sidenav a {
+    /* أنماط الرابط الفردي هنا */
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #0A284E;
+    transition: 0.3s;
+}
+       
+       
+       
+                   .sidenavv {padding-top: 15px;}
+                   .sidenavv a {font-size: 18px;}
+               
+       
+               .sidenav a:hover {
+                   color: orange ;
+               }
+       
+               .sidenav .closebtn {
+                   position: absolute;
+                   top: 0;
+                   left: 25px;
+                   font-size: 36px;
+                   margin-right: 50px;
+               }
+       
+                   .sidenav {padding-top: 15px;}
+                   .sidenav a {font-size: 18px;}
+               
+       
+               .nav-icons {
+                   display: none; /* يتم إخفاء الأيقونة في البداية */
+               }
+       
+               .nav-icons.active {
+                   display: block; /* عرض الأيقونة عند النقر عليها */
+                   cursor: pointer;
+               }
+           </style>
+ <nav class="navbar navbar-expand-md navbar-white bg-white shadow-sm fixed">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <img class="navbar-toggler-icon" src="images/list.gif" alt="">
+        </button>
+              
+        <style>
+            .navbar-toggler {
+    border: none;
+    padding: 8;
+    background: none;
+}
+.navbar-brand {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .navbar-brand {
+        display: block;
+    }
+}
+        </style>
+     
+          
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav clas m-auto">
+               
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" onclick="redirectToPath()" style="color: #0A284E;">الرئيسيه </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="test.html" onclick="redirectToPath()" style="color: #0A284E;">مشاريع جاهزه</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="redirectToPath()" style="color: #0A284E;">تسجيل دخول</a>
+                </li>
+                <li class="nav-item  ">
+                    <a class="nav-link text-warning" href="index.html" onclick="redirectToPath()" tabindex="-1" aria-disabled="true" style="color: #0A284E; margin: 2px;">انضم</a>
+                </li>
+            </ul>
+            
+        </div>
+        <br>
+        <a class="nav-link navbarr-toggler" href="#"   style="color: #0A284E;  margin-left: 10px; ">
+            <img src="images/purchase.png" width="20px" alt="">
+        </a>
+        
+    </div>
+</nav>
+
+<style>
+    .clas{
+        margin-inline-start: auto;
+    }
+
+    @media (max-width: 768px) {
+    .row {
+        flex-direction: row; /* تغيير توجيه الصف ليكون أفقيًا */
+        flex-wrap: wrap; /* السماح بالتفاف العناصر عندما يكون العرض ضيقًا */
+        justify-content: space-between; /* توزيع العناصر بالتساوي على طول الصف */
+    }
+
+    .col-md-2 {
+        width: calc(50% - 10px); /* جعل عرض العمود 50% مع تحديد التباعد بين العمودين */
+        margin-bottom: 20px; /* تباعد بين البطاقات */
+    }
+}
+</style>
+
+<div class="sidenav">
+    <a href="#"   onclick="redirectToPath()"  class="closebtn">&times;</a>
+    <a href="#"  onclick="redirectToPath()" >الرئيسية</a>
+    <a href="#"  onclick="redirectToPath()" > قصتنا</a>
+    <a href="#"  onclick="redirectToPath()" >تحدث مع الفريق</a>
+    <a href="# "  onclick="redirectToPath()" >الاراء</a>
+    <a href="#"  onclick="redirectToPath()" >الدعم الفني</a>
+    <a href="#"  onclick="redirectToPath()" > منتجاتنا</a>
+    <a href="#"  onclick="redirectToPath()" >انضم الينا</a>
+</div>
+
+<div class="sidenavv">
+    <a href="#"   onclick="redirectToPath()"  class="closebbtn">&times;</a>
+    <div class="container">
+        <p>عربة التسوق فارغة الآن</p>
+    </div>
+<style>
+    .sidenavv .container {
+        padding: 80px;
+        background-color: #f8f9fa;
+        margin-right: 10px;
+        margin-left: 150px;
+        /* border: 1px solid #dee2e6; */
+        /* border-radius: 7px; */
+        margin-top: 100px;
+        text-align: center;
+        /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
+    }
+
+    .sidenavv .container p {
+        margin: 0;
+        font-size: 24px;
+        color: #333;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+</style>
+</div>
+
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="search" placeholder="ابحث هنا...">
+            <br>
+            <select id="category">
+                <option value="all">الكل</option>
+                <option value="websites">مواقع</option>
+                <option value="applications">تطبيقات</option>
+                <option value="microsoft">مايكروسوفت</option>
+                <option value="marketing">تسويق</option>
+            </select>
+        </div>
+        <br>
+        <style>
+            .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .search-container input,
+    .search-container select {
+        width: 30%;
+    }
+}
+        </style>
+        <div id="cards-container" class="cards-container">
+            <!-- بطاقات المواقع -->
+            <div class="card websites">
+                <a href="details.html">
+                    <img src="images/pexels-photo-106399.jpeg" alt="صورة موقع">
+
+                </a>
+                <div class="card-content">
+                    <h3>بطاقة موقع   1</h3>
+                    <p>وصف لبطاقة الموقع مواقع  1.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="price">$10</span>
+                    <span class="heart">❤️</span>
+                </div>
+            </div>
+            <div class="card websites">
+                <a href="details.html">
+                    <img src="images/pexels-photo-1732414.jpeg" alt="صورة موقع">
+
+                </a>
+                <div class="card-content">
+                    <h3>بطاقة موقع web 2</h3>
+                    <p>وصف لبطاقة الموقع 2.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="price">$15</span>
+                    <span class="heart">❤️</span>
+                </div>
+            </div>
+            <div class="card websites">
+                <a href="details.html">
+                    <img src="images/pexels-photo-206172.jpeg" alt="صورة موقع">
+
+                </a>
+                <div class="card-content">
+                    <h3>بطاقة موقع 3</h3>
+                    <p>وصف لبطاقة الموقع 3.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="price">$20</span>
+                    <span class="heart">❤️</span>
+                </div>
+            </div>
+
+            <!-- بطاقات التطبيقات -->
+            <div class="card applications">
+                <a href="details.html">
+                    <img src="images/pexels-pixabay-414974.jpg" alt="صورة تطبيق">
+
+                </a>
+                <div class="card-content">
+                    <h3>بطاقة تطبيق 1</h3>
+                    <p>وصف لبطاقة التطبيق 1.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="price">$12</span>
+                    <span class="heart">❤️</span>
+                </div>
+            </div>
+            <div class="card applications">
+                <a href="details.html">
+                    <img src="images/pexels-photo-3221215.jpeg" alt="صورة تطبيق">
+
+                </a>
+                <div class="card-content">
+                    <h3>بطاقة تطبيق 2</h3>
+                    <p>وصف لبطاقة التطبيق 2.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="price">$18</span>
+                    <span class="heart">❤️</span>
+                </div>
+            </div>
+            <div class="card applications">
+                <a href="details.html">
+                    <img src="images/pexels-photo-1732414.jpeg" alt="صورة تطبيق">
+
+                </a>
+                <div class="card-content">
+                    <h3>بطاقة تطبيق 3</h3>
+                    <p>وصف لبطاقة التطبيق 3.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="price">$25</span>
+                    <span class="heart">❤️</span>
+                </div>
+            </div>
+
+            <!-- بطاقات مايكروسوفت -->
+            <div class="card microsoft">
+                <a href="details.html">
+                    <img src="images/pexels-photo-206172.jpeg" alt="صورة مايكروسوفت">
+
+                </a>
+                <div class="card-content">
+                    <h3>بطاقة مايكروسوفت 1</h3>
+                    <p>وصف لبطاقة مايكروسوفت 1.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="price">$22</span>
+                    <span class="heart">❤️</span>
+                </div>
+            </div>
+            <div class="card microsoft">
+                <a href="details.html">
+                    <img src="images/istockphoto-2148563141-612x612.jpg" alt="صورة مايكروسوفت">
+
+                </a>
+                <div class="card-content">
+                    <h3>بطاقة مايكروسوفت 2</h3>
+                    <p>وصف لبطاقة مايكروسوفت 2.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="price">$30</span>
+                    <span class="heart">❤️</span>
+                </div>
+            </div>
+            <div class="card microsoft">
+                <a href="details.html">
+                    <img src="images/pexels-photo-277667.jpeg" alt="صورة مايكروسوفت">
+
+                </a>
+                <div class="card-content">
+                    <h3>بطاقة مايكروسوفت 3</h3>
+                    <p>وصف لبطاقة مايكروسوفت 3.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="price">$35</span>
+                    <span class="heart">❤️</span>
+                </div>
+            </div>
+
+            <!-- بطاقات التسويق -->
+            <div class="card marketing">
+                <a href="details.html">
+                    <img src="images/pexels-photo-2371975.jpeg" alt="صورة تسويق">
+
+                </a>
+                <div class="card-content">
+                    <h3>بطاقة تسويق 1</h3>
+                    <p>وصف لبطاقة التسويق 1.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="price">$28</span>
+                    <span class="heart">❤️</span>
+                </div>
+            </div>
+            <div class="card marketing">
+                <a href="details.html">
+                    <img src="images/pexels-tranmautritam-245032.jpg" alt="صورة تسويق">
+
+                </a>
+                <div class="card-content">
+                    <h3>بطاقة تسويق 2</h3>
+                    <p>وصف لبطاقة التسويق 2.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="price">$32</span>
+                    <span class="heart">❤️</span>
+                </div>
+            </div>
+            <div class="card marketing">
+                <a href="details.html">
+                    <img src="images/pexels-photo-1396122.jpeg" alt="صورة تسويق">
+                </a>
+                <div class="card-content">
+                    <h3>بطاقة تسويق 3</h3>
+                    <p>وصف لبطاقة التسويق 3.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="price">$40</span>
+                    <span class="heart">❤️</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="not-found" class="not-found" style="display: none;">لا توجد نتائج مطابقة.</div>
+    </div>
+
+    <script>
+        // قائمة الكلمات المتشابهة
+        const similarWords = {
+            websites: ['website', 'websites', 'web' ],
+            applications: ['application', 'applications', 'app'],
+            microsoft: ['microsoft', 'msft'],
+            marketing: ['marketing', 'market'],
+            all: ['all']
+        };
+
+        // دالة للتحقق من وجود كلمات متشابهة
+        function isSimilar(word1, word2) {
+            // استخدام RegExp للتحقق من وجود تشابه بين الكلمات
+            const pattern = new RegExp(word1, 'i'); // 'i' لتجاهل حالة الأحرف (case-insensitive)
+            return pattern.test(word2);
+        }
+
+        // دالة لعرض البطاقات بناءً على الفئة وكلمات البحث
+        function displayCards(category, searchText = '') {
+            const cards = document.querySelectorAll('.card');
+            const notFoundElement = document.getElementById('not-found');
+            let hasResults = false;
+
+            cards.forEach(card => {
+                const cardCategory = card.classList[1]; // الفئة التي تحتوي عليها البطاقة
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const isVisibleCategory = category === 'all' || cardCategory === category;
+
+                // تحقق من وجود أي تطابق لكلمات البحث
+                const searchWords = searchText.toLowerCase().split(/\s+/); // تقسيم النص إلى كلمات فردية
+                const titleWords = title.split(/\s+/); // كلمات العنوان للكارت
+
+                let isVisibleSearch = false;
+
+                // البحث عن تطابقات في كلمات البحث
+                searchWords.forEach(searchWord => {
+                    titleWords.forEach(titleWord => {
+                        if (isSimilar(searchWord, titleWord)) {
+                            isVisibleSearch = true;
+                        }
+                    });
+
+                    // البحث عن الكلمات المتشابهة
+                    if (similarWords.hasOwnProperty(searchWord)) {
+                        if (similarWords[searchWord].includes(cardCategory)) {
+                            isVisibleSearch = true;
+                        }
+                    }
+                });
+
+                if (isVisibleCategory && isVisibleSearch) {
+                    card.style.display = 'block'; // أظهر البطاقة
+                    hasResults = true;
+                } else {
+                    card.style.display = 'none'; // أخف البطاقة
+                }
+            });
+
+            // إظهار رسالة "not found" إذا لم توجد نتائج مطابقة
+            if (!hasResults) {
+                notFoundElement.style.display = 'block';
+            } else {
+                notFoundElement.style.display = 'none';
+            }
+        }
+
+        document.getElementById('search').addEventListener('input', function () {
+            const category = document.getElementById('category').value;
+            const searchText = this.value;
+            displayCards(category, searchText);
+        });
+
+        document.getElementById('category').addEventListener('change', function () {
+            const category = this.value;
+            const searchText = document.getElementById('search').value;
+            displayCards(category, searchText);
+        });
+
+        // عرض كل البطاقات عند التحميل الأولي للصفحة
+        displayCards('all');
+    </script>
+</body>
+</html>
